@@ -1,0 +1,40 @@
+#Run these following commands only in Master
+sudo apt update
+sudo apt upgrade
+
+sudo apt install mariadb-server
+sudo mysql_secure_installation
+sudo mysql -u root -p
+
+CREATE USER 'exampleuser'@'localhost' IDENTIFIED BY 'pimylifeup';
+GRANT ALL PRIVILEGES ON exampledb.* TO 'exampleuser'@'localhost';
+FLUSH PRIVILEGES;
+
+show databases;
+CREATE DATABASE test4fraunhofer;
+use test4fraunhofer;
+
+show tables;
+
+drop table intentar_chemicals;
+
+## https://pimylifeup.com/raspberry-pi-mysql/
+
+//Create database table
+create table intentar_chemicals_new(
+   id INT NOT NULL AUTO_INCREMENT,
+   no INT NOT NULL,
+   name_of_chemicals TEXT NOT NULL,
+   cabinets TEXT,
+   cas_number TEXT,
+   supplier TEXT NOT NULL,
+   quantity TEXT NOT NULL,
+   quantity_number INT NOT NULL,
+   person TEXT NOT NULL,
+   securitydata TEXT,
+   input_date DATE,
+   comment TEXT,
+   PRIMARY KEY ( id )
+);
+
+

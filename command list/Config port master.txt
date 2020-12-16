@@ -1,0 +1,53 @@
+#To config port of master database, this following file muss be edited. Run command in command windows:
+cd
+cd /etc/mysql/mariadb.conf.d
+sudo nano 50-server.cnf
+
+#Change line bind-address to:
+bind-address = 0.0.0.0
+
+#Then ctrl + X => choose yes to save file.
+
+#Run these following commands in mysql database:
+
+GRANT ALL ON <local database name>.* TO <remote web node username>@<remote web node server ip address> IDENTIFIED BY '<database user password>';
+#For example: 
+#GRANT ALL ON *.* TO root@192.168.178.2 IDENTIFIED BY 'fraunhofer';
+#GRANT ALL ON *.* TO root@192.168.178.3 IDENTIFIED BY 'fraunhofer';
+#GRANT ALL ON *.* TO root@192.168.178.34 IDENTIFIED BY 'fraunhofer';
+
+FLUSH PRIVILEGES;
+
+
+#Kill ftp port in master
+fuser -k 1026/tcp
+
+#Check running ftp port in master 
+sudo netstat -nlp | grep 1026
+
+#Run ftpserver.py whenever start-up Raspberry Pi
+cd 
+cd /home/pi/Downloads/SaveList
+sudo nano launcher.sh
+
+#Write these following lines in launcher.sh
+#!/bin/sh
+cd /
+cd /home/pi/Downloads/SaveList
+sudo python3 ftpserver.py
+cd /
+
+#Then Ctrl + X => Yes => Save
+sudo chmod 755 launcher.sh
+sudo sh launcher.sh
+
+#Then Ctrl + D => Stop
+sudo mkdir logs
+cd
+sudo crontab -e
+
+#Add this line to the end of file
+@reboot sh /home/pi/Downloads/SaveList/launcher.sh > /home/pi/Downloads/SaveList/logs/cronlog 2>&1
+
+
+

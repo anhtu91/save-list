@@ -1,0 +1,2 @@
+#Create *.py file from *.ui
+pyuic5 -x gui.ui -o gui.py

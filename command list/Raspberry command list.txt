@@ -1,0 +1,9 @@
+#Raspberry
+sudo apt-get install python3-pyqt5
+sudo apt-get -y install python3-mysql.connector
+
+pip3 install python-dateutil
+
+pip3 install xlrd
+pip3 install xlwt
+pip3 install pyftpdlib

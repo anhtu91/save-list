@@ -1,0 +1,45 @@
+#Run this command:
+cd Desktop
+sudo nano *name of file*.desktop
+
+===================================================
+[Desktop Entry]
+
+Name=Start sharing database
+
+Icon=/home/pi/Downloads/SaveList/icon/ftp-server.png
+
+Exec=python3 /home/pi/Downloads/SaveList/ftpserver.py
+
+Type=Application
+
+Categories=None;
+
+====================================================
+
+[Desktop Entry]
+
+Name=Safe List of Chemicals Batterielabor CL25
+
+Icon=/home/pi/Downloads/SaveList/icon/save-list.png
+
+Exec=python3 /home/pi/Downloads/SaveList/gui.py
+
+Type=Application
+
+Categories=None;
+
+
+=====================================================
+
+[Desktop Entry]
+
+Name=Import Export Data
+
+Icon=/home/pi/Downloads/SaveList/icon/excel-xls-icon.png
+
+Exec=python3 /home/pi/Downloads/SaveList/ie.py
+
+Type=Application
+
+Categories=None;

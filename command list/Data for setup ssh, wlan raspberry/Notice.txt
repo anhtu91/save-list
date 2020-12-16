@@ -1,0 +1,4 @@
+Copy file ssh and wpa_supplicant.conf to folder boot in SD Card for the very first time after install Raspbian in SD Card.
+These files activate WLAN Connection and SSH in Raspberry. The default user of ssh is "pi" and password is "raspberry".
+
+
