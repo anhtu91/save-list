@@ -38,15 +38,15 @@ from datetime import datetime, date
 
 
 #Change these lines for appropriate MySql server
-databaseTable = "intentar_chemicals_new"
-database = "test4fraunhofer"
-databasePassword = "Thaivannhan59@"
-databaseUser = "newuser"
+databaseTable = "xxxxxxx"
+database = "xxxxxxx"
+databasePassword = "xxxxxxxx"
+databaseUser = "xxxxxxx"
 databaseLocalhost = "localhost"
 
 #FTP Server config
-userFTPServer = "fraunhoferumsicht"
-passwordFTPServer = "password@Datenbank"
+userFTPServer = "xxxxxxxxxx"
+passwordFTPServer = "xxxxxxxxx"
 portFTPServer = 1026
 
 #Save setting and datasheet folder
