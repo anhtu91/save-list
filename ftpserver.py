@@ -19,8 +19,8 @@ def getCurrentIP():
     return IP
 
 
-userFTPServer = "fraunhoferumsicht"
-passwordFTPServer = "password@Datenbank"
+userFTPServer = "xxxxxxxxxx"
+passwordFTPServer = "xxxxxxxxx"
 portFTPServer = 1026
 securityDataSheetFolderPath = "/security_datasheet"
 
