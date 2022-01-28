@@ -2,7 +2,7 @@
 
 Small tool, which saves submission data to MySQL Database and uses on Raspberry Pi. Written with PyQT5.
 
-See command list folder to see how to install.
+See command list folder to know how to install.
 
 
     Created by Anh Tu Nguyen/anhtu91@gmail.com
